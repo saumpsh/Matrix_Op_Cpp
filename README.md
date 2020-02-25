@@ -1,2 +1,2 @@
 # Matrix_Op_Cpp
-Transpose and multiplication of MxN matrices
+Transpose and multiplication of MxN matrices program
