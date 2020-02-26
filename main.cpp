@@ -21,14 +21,12 @@ int my_matrix[M_ROWS][N_COLS] =
 int main()
 {
     //Creates an object of type Matrix
-    // Matrix m;
-    Matrix m(3, 2);
-    // m.getCol();
-    // m.getRow();
+    //Arguments are rows and columns
+    Matrix m1(3, 2);
     
-    m.fill();
-    m.print();
+    m1.fill();
+    m1.print();
 
-    // m.transpose(my_matrix);
+    m1.transpose();
     return 0;
 }

@@ -11,12 +11,10 @@ using namespace std;
 class Matrix{
 public:
     Matrix(int r, int c);
-    void transpose(int arr[M_ROWS][N_COLS]);
+    void transpose();
     void fill();
     void print();
-    // void getRow(){cout << rowSize;}
-    // void getCol(){cout<< columnSize;}
-
+    
 private:
     int **pMatrix;
     int rowSize, columnSize;
@@ -31,16 +29,16 @@ Matrix::Matrix(int r, int c){
     }
 }
 
-void Matrix::transpose(int arr[M_ROWS][N_COLS])
+void Matrix::transpose()
 {
-        int trans_matrix[N_COLS][M_ROWS];
-    printf( "%d,%d-\n", N_COLS, M_ROWS); 
+    int trans_matrix[columnSize][rowSize];
+    cout << "Transpose Matrix is: "<< endl;
     
-    for (int j = 0; j < N_COLS; j++)
+    for (int j = 0; j < columnSize; j++)
     {
-        for (int i = 0; i < M_ROWS; i++)
+        for (int i = 0; i < rowSize; i++)
         {
-            trans_matrix[j][i] = arr[i][j] ;
+            trans_matrix[j][i] = pMatrix[i][j] ;
             printf( "%d,",trans_matrix[j][i]);   
         }
         printf( "\n");
@@ -65,8 +63,9 @@ void Matrix::print()
     cout << "Matrix is: "<<endl;
     for (int row = 0; row < rowSize; row++)
     {
-        for (int col = 0; col < columnSize; col++)
+        for (int col = 0; col < columnSize; col++){
             cout << setw(5) << pMatrix[row][col];
+        }            
         cout << endl;   
     }
 }
