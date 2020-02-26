@@ -7,9 +7,20 @@ using namespace std;
 //void transpose(int arr[M_ROWS][N_COLS]);
 
 class Matrix{
-    public:
+public:
+    Matrix(int r, int c);
     void transpose(int arr[M_ROWS][N_COLS]);
+    void fill(int **p, int rowSize, int columnSize);
+    void print(int **p, int rowSize, int columnSize);
+
+private:
+    int **pMatrix;
+    int rowSize, columnSize;
 };
+
+Matrix::Matrix(int r, int c){
+
+}
 
 void Matrix::transpose(int arr[M_ROWS][N_COLS])
 {

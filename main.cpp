@@ -21,8 +21,8 @@ int my_matrix[M_ROWS][N_COLS] =
 int main()
 {
     //Creates an object of type Matrix
-    Matrix m;
-    
-    m.transpose(my_matrix);
+    // Matrix m;
+
+    // m.transpose(my_matrix);
     return 0;
 }
