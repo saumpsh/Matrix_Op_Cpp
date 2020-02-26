@@ -22,6 +22,12 @@ int main()
 {
     //Creates an object of type Matrix
     // Matrix m;
+    Matrix m(3, 2);
+    // m.getCol();
+    // m.getRow();
+    
+    m.fill();
+    m.print();
 
     // m.transpose(my_matrix);
     return 0;
